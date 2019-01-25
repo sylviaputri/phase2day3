@@ -10,4 +10,5 @@ public interface UserService {
     public abstract User createUser(String nama, int balance);
     public abstract User updateUser(Long id, String nama, int balance);
     public abstract void deleteUser(Long id);
+    public abstract User getUserByNameAndPassword(String nama, String pass);
 }

@@ -25,4 +25,9 @@ public class UserController {
     public User getUserById(@PathVariable("id") Long id){
         return userService.getUserById(id);
     }
+
+    @RequestMapping(value = {"/api/getUserByNameAndPass/{name}/{pass}"}, method = RequestMethod.GET)
+    public User getUserByNameAndPass(@PathVariable("name") String name,@PathVariable("pass") String pass){
+        return userService.getUserByNameAndPassword(name,pass);
+    }
 }
